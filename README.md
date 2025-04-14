@@ -1,84 +1,80 @@
-# BBContestReferEarnBot - chat bot
-It is repository for chat bot: [@BBContestReferEarnBot](https://t.me/BBContestReferEarnBot)
+# BBContestReferEarnBot
 
-## What it is?
-This repository can be imported to [Bots.Business](https://bots.business) as a worked chat bot.
+**BBContestReferEarnBot** is a Telegram bot built on the Bots.Business platform. It rewards users in INR for referring friends, participating in contests, redeeming gift codes, and engaging in gamified features. The bot tracks referrals, deposits, withdrawals, and bonuses, making it perfect for viral campaigns and community growth.
 
-[Bots.Business](https://bots.business) - it is probably the first CBPaaS - Chat Bot Platform as a Service.
+## Features
 
-A CBPaaS is a cloud-based platform that enables developers to create chatbots without needing to build backend infrastructure.
+### 🎯 Referral System
+- Users earn INR rewards by inviting others.
+- Each referral is tracked automatically.
+- Referral bonuses are added to the user’s INR balance.
 
-## Create your own bot for Telegram from this Git repo
+### 💰 INR Balance Management
+- User balances are maintained in Indian Rupees (INR).
+- Admins can manually credit or debit balances for bonuses, deposits, or other adjustments.
 
-How to create bot?
-1. Create bot with [@BotFather](https://telegram.me/BotFather) and take Secret Token
-2. Create bot in App and add Secret Token
-3. Add Public Key from App as [Deploy key](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) with read access (and write access for bot exporting if you need it)
-4. Do import for this git repo
+### 💳 Deposit & Withdrawal Interface
+- Users can request withdrawals directly to **Paytm**.
+- Admins receive inline buttons to approve or reject requests.
+- Secure and fast manual payout flow via Paytm.
 
-Now you can talk with yours new Telegram Bot
+### 📜 Transaction History
+- Users can view their **last 10–20 transactions**.
+- Shows deposits, referrals, bonuses, gift redemptions, and withdrawals.
 
-See [more](https://help.bots.business/getting-started)
+### 🎁 Gift Code System
+- Users can **create gift codes** by spending from their balance.
+- Others can **redeem codes** to receive INR into their balance.
+- Single-use codes with validation to prevent abuse.
 
-## Commands - in commands folder
-File name - it is command name (Bot it can be rewritten in command description)
+### 🕹️ Mini Games (Optional)
+- Fun tap-to-earn or spin wheel games to keep users engaged.
+- Rewards users with bonus INR.
 
-Command can have: `name`, `help`, `aliases` (second names), `answer`, `keyboard`, `scnarios` (for simple logic) and other options.
+### 📊 Personal Dashboard
+- Displays current balance, total referrals, and recent transactions.
+- Presented with a clean, interactive Telegram UI.
 
-### Command description
-It is file header:
+## Commands
 
-    /*CMD
-      command: /test
-      help: this is help for ccommand
-      need_reply: [ true or false here ]
-      auto_retry_time: [ time in sec ]
-      answer: it is example answer for /test command
-      keyboard: button1, button2
-      aliases: /test2, /test3
-    CMD*/
+- `/start` – Start the bot and see welcome info
+- `/balance` – View current INR balance
+- `/refer` – Get referral link and see stats
+- `/stats` - Check stats of bot.
+- `/transactions` – See recent transaction history
+- `/withdraw` – Request a withdrawal to Paytm
+- `/gift` – Create or redeem a gift code
+- `/support` - Contact Admin For Issues.
 
-See [more](https://help.bots.business/commands)
+## Admin Tools
 
-### Command body
-It is command code in JavaScript.
-Use Bot Java Script for logic in command.
+- Inline button approval for withdrawals
+- Manual transaction control
+- Access to logs and user stats
+- Set Referral Amount
+- Turn On or Turn Off Maintenance Mode
+- Send Mass Messages (Broadcast)
 
-For example:
-> Bot.sendMessage(2+2);
+## Tech Stack
 
-See [more](https://help.bots.business/scenarios-and-bjs)
+- **Platform**: [Bots.Business](https://bots.business)
+- **Language**: BJS (Bots.Business JavaScript)
+- **Storage**: Built-in key-value storage
+- **Payment Method**: Manual Paytm transfers
 
+## Use Cases
 
-## Libraries - in libs folder
-You can store common code in the libs folder. File name - it is library name.
+- Host contests and referral campaigns
+- Reward users for engagement
+- Drive viral growth through gifting and gamification
 
-For example code in myLib.js:
+## Future Upgrades
 
-    function hello(){ Bot.sendMessage("Hello from lib!") }
-    function goodbye(name){ Bot.sendMessage("Goodbye, " + name) }
+- Paytm API integration for auto-payouts
+- Contest leaderboard feature
+- More interactive games and events
+- Web admin dashboard
 
-    publish({
-      sayHello: hello,
-      sayGoodbyeTo: goodbye
-    })
+---
 
-then you can run in any bot's command:
-
-    Libs.myLib.hello()
-    Libs.myLib.sayGoodbyeTo("Alice")
-
-See [more](https://help.bots.business/git/library)
-
-## Other bots example
-See other bots examples in the [github](https://github.com/bots-business?utf8=✓&tab=repositories&q=&type=public&language=javascript) or in the [Bot Store](https://bots.business/)
-
-
-## Other help
-[Help.bots.business](https://help.bots.business)
-
-## API
-See [API](https://api.bots.business/docs#/docs/summary)
-
-
-![](https://bots.business/images/web-logo.png)
+**Built for the Indian creator economy. Powered by referrals and rewards.**
