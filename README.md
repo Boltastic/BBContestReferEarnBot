@@ -27,10 +27,6 @@
 - Others can **redeem codes** to receive INR into their balance.
 - Single-use codes with validation to prevent abuse.
 
-### 🕹️ Mini Games (Optional)
-- Fun tap-to-earn or spin wheel games to keep users engaged.
-- Rewards users with bonus INR.
-
 ### 📊 Personal Dashboard
 - Displays current balance, total referrals, and recent transactions.
 - Presented with a clean, interactive Telegram UI.
